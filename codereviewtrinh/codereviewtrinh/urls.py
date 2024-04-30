@@ -21,8 +21,8 @@ from posts.views import SignUpView, PostListView, PostCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("accounts/", include("django.contrib.auth.urls")),
-    path("signup/", SignUpView.as_view(), name="signup"),
-    path('posts', PostListView.as_view(), name='posts'),
+    path("accounts/", include("django.contrib.auth.urls")), #this adds all the built in django logins to the project
+    path("signup/", SignUpView.as_view(), name="signup"), #this creates a view out of the form
+    path('posts', PostListView.as_view(), name='posts'), #this is supposed to create a view out of this form, but then didn't work out...
     path("post/new/", PostCreateView.as_view(), name="postnew"), 
 ]
