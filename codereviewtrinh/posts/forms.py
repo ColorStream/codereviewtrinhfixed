@@ -1,1 +1,3 @@
 from django import forms
+
+# I should've just used a comment form, but I thought having the view & form together would've been easier but it wasn't...
