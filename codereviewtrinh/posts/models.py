@@ -8,9 +8,11 @@ class Post(models.Model):
     upvotes = models.IntegerField(default=0)
     downvotes = models.IntegerField(default=0)
 
-    def __str__(self) -> str:
-        return super().__str__()
-    
+    def __str__(self):
+        return self.text
+
+    # These were just for ease, but then I never got around to getting to use them anyway. 
+    # Not the best for something you'd want users to only like/dislike once, but would work in a pinch.
     def upvote(self):
         self.upvotes += 1
         self.save()
